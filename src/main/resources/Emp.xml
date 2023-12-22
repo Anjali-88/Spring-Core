@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--this is our bean-->
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context
+       http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <bean class = "com.spring.collections.Emp" name = "emp1">
+    <property name="employeeName" value="Anjali"/>
+        <property name="phones" >
+<!--            if we have 2 elements we need not use the list tag-->
+            <list>
+                <value> 123456</value>
+                <value>098773</value>
+                <value>456788</value>
+                <null/>
+            </list>
+        </property>
+
+        <property name="addresses" >
+            <set>
+                <value> Gurugram</value>
+                <value>Bangalore</value>
+                <value>Chennai</value>
+            </set>
+        </property>
+        <property name="courses" >
+            <map>
+                <entry key="Java" value = "2 months"/>
+                <entry key="Python" value = "1 month"/>
+                <entry key="JavaScript" value = "1 month"/>
+            </map>
+        </property>
+
+        <property name="props" >
+            <props>
+                <prop key="MsDB">1234</prop>
+                <prop key="RbDB">6789</prop>
+            </props>
+        </property>
+    </bean>
+
+
+
+</beans>
+
+
+
